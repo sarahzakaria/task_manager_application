@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="text-center">
+    <h1>Welcome to the Task Manager</h1>
+    <p><a href="{{ url_for('main.login') }}" class="btn btn-primary">Login</a> or <a href="{{ url_for('main.signup') }}" class="btn btn-secondary">Sign Up</a></p>
+</div>
+{% endblock %}
