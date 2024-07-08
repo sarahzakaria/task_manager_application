@@ -31,14 +31,13 @@ docker-compose up -d
    - **Password:** `admin`
 4. You should now see the server with two tables: `Users` and `Tasks`.
 
-### MongoDB
+### Database
 
-1. Access MongoDB by navigating to [localhost:8081](http://localhost:8081).
-   Track the log events in the MongoDB database.
+1. Access the database portal by navigating to localhost:8081 to check the database and track log events.
 
-### Redis
+### Worker
 
-1. Access Redis by navigating to [localhost:5555](http://localhost:5555).
+1. Access a running Worker by navigating to [localhost:5555](http://localhost:5555).
 2. You will see a table with fields:
    - Worker
    - Status
@@ -74,13 +73,5 @@ This happens because the script file saved with Windows line endings (`CRLF`) is
 
 ### Solution
 
-Save the script file with Unix-style line endings (`LF`). You can use any decent text editor (Sublime Text, Notepad++, any IDE) or a command-line tool like `dos2unix`. Here’s a step-by-step solution using Notepad++:
-
-1. Open the script file (`scripts/docker_script.sh`) in Notepad++.
-2. Go to `Edit` -> `EOL Conversion` -> `Unix (LF)`.
-3. Save the file.
-
-Alternatively, you can use `dos2unix` if you have it installed:
-
-```sh
-dos2unix scripts/docker_script.sh
+After research, this link provides the best solution.
+https://unix.stackexchange.com/questions/433444/cant-run-script-file-in-docker-no-such-file-or-directory
